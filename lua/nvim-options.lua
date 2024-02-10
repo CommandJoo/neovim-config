@@ -1,0 +1,13 @@
+local o = vim.opt
+local g = vim.g
+o.number = true
+o.relativenumber = true
+o.autoindent = true
+o.tabstop=4
+o.shiftwidth = 4
+o.smarttab = true
+o.softtabstop = 4
+o.mouse=a
+o.clipboard = "unnamed"
+o.encoding = "UTF-8"
+g.mapleader = " "
