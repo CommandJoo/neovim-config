@@ -11,5 +11,3 @@ return {
 		vim.keymap.set("n", "T", ":Neotree filesystem toggle left<CR>")
 	end
 }
-
-
