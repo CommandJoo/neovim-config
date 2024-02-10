@@ -11,3 +11,4 @@ o.mouse=a
 o.clipboard = "unnamed"
 o.encoding = "UTF-8"
 g.mapleader = " "
+o.syntax = on 
