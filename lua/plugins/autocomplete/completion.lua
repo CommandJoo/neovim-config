@@ -6,14 +6,16 @@ return {
 		-- install jsregexp (optional!).
 		build = "make install_jsregexp",
 		dependencies = { "saadparwaiz1/cmp_luasnip", "rafamadriz/friendly-snippets" },
-	},{
+	},
+	{
 		"hrsh7th/cmp-nvim-lsp",
-	},{
+	},
+	{
 		"hrsh7th/nvim-cmp",
 		config = function()
 			local cmp = require("cmp")
 			require("luasnip.loaders.from_vscode").lazy_load()
-			
+
 			cmp.setup({
 				snippet = {
 					expand = function(args)
@@ -32,7 +34,7 @@ return {
 					["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 				}),
 				sources = cmp.config.sources({
-					{ name = 'nvim_lsp' },
+					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- For luasnip users.
 				}, {
 					{ name = "buffer" },

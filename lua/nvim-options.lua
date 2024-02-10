@@ -13,3 +13,4 @@ o.encoding = "UTF-8"
 g.mapleader = " "
 o.syntax = "on"
 o.wrap = false
+o.termguicolors = true

@@ -27,7 +27,7 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.jdtls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover)

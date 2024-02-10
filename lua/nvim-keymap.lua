@@ -9,8 +9,6 @@ local function imap(binding, command)
 	map("i", binding, command)
 end
 
-imap("ii", "<Esc>")
-
 -- NeoTree opening = Shift + T
 nmap("T", ":Neotree filesystem toggle left<CR>")
 
@@ -20,3 +18,8 @@ nmap("<leader>fg", ":Telescope live_grep<CR>")
 nmap("<leader>fh", ":Telescope oldfiles<CR>")
 
 nmap("<C-t>", ":set splitbelow<CR>:8sp<CR>:set nosplitbelow<CR>:enew<CR>:Neomux<CR>")
+
+
+-- Tab navigation
+nmap("<C-Right>", ":bnext<CR>")
+nmap("<C-Left>", ":bprevious<CR>")
