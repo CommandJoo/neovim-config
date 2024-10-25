@@ -12,7 +12,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "jdtls"},
+				ensure_installed = { "lua_ls", "jdtls", "pylsp", "eslint", "tsserver"},
 				auto_install = true,
 			})
 		end,
@@ -21,12 +21,14 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.jdtls.setup({
+			--lspconfig.eslint.setup({})
+			lspconfig.tsserver.setup({
 				capabilities = capabilities,
 			})
 
