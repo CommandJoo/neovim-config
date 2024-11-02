@@ -12,7 +12,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "jdtls", "pylsp", "eslint", "tsserver"},
+				ensure_installed = { "lua_ls", "jdtls", "pylsp", "eslint", "tsserver", "clangd"},
 				auto_install = true,
 			})
 		end,
@@ -29,6 +29,9 @@ return {
 			})
 			--lspconfig.eslint.setup({})
 			lspconfig.tsserver.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
 
