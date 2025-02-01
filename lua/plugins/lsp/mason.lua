@@ -12,7 +12,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "jdtls", "pylsp", "eslint", "tsserver", "clangd"},
+				ensure_installed = {"lua_ls", "cssls", "jdtls", "pylsp", "eslint", "ts_ls", "clangd", "rust_analyzer", "dprint", "gopls", "asm_lsp"},
 				auto_install = true,
 			})
 		end,
@@ -27,11 +27,32 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-			--lspconfig.eslint.setup({})
-			lspconfig.tsserver.setup({
+			lspconfig.cssls.setup({
+				capabilities = capabilities,
+			})
+			-- lspconfig.jdtls.setup({
+			-- 	capabilities = capabilities,
+			-- 	java = {
+			-- 		home = "/usr/lib/jvm/java-23-openjdk",
+			-- 	},
+			-- })
+			-- --lspconfig.eslint.setup({})
+			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.clangd.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.rust_analyzer.setup({
+				capabilities = capabilities,
+				settings = {
+					['rust-analyzer'] = {},
+				},
+			})
+			lspconfig.gopls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.asm_lsp.setup({
 				capabilities = capabilities,
 			})
 

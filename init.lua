@@ -11,9 +11,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local is_windows = false;--set true if on windows
+vim.env.PATH = vim.fn.stdpath "data" .. "/mason/bin" .. (is_windows and "; " or ":") .. vim.env.PATH
 -- Settings
 require("nvim-options")
 require("nvim-keymap")
 
 -- Plugins
 require("lazy").setup("plugins")
+vim.cmd.colorscheme("tokyonight-night")

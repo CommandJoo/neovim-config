@@ -11,6 +11,7 @@ return {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettier,
 				null_ls.builtins.formatting.astyle,
+--				null_ls.builtins.formatting.dprint,
 			},
 		})
 

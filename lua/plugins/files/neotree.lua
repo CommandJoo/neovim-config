@@ -9,5 +9,9 @@ return {
 	},
 	config = function()
 		vim.keymap.set("n", "T", ":Neotree filesystem toggle left<CR>")
-	end
+		require("neo-tree").setup({
+			close_if_last_window = false,
+			enable_diagnostics = true,
+		})
+	end,
 }
